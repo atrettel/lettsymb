@@ -46,6 +46,56 @@
 }
 }
 
+\newcommand{\newComponentQuantity}[4]{%
+\newcommand{#1}[1]{%
+\def\temp{##1}
+\def\tempone{1}
+\def\temptwo{2}
+\def\tempthree{3}
+\ifx\temp\tempone%
+#2
+\else
+\ifx\temp\temptwo%
+#3
+\else
+\ifx\temp\tempthree%
+#4
+\else
+{#2}_{##1}
+\fi
+\fi
+\fi
+}
+}
+
+\newcommand{\newNumberedComponentQuantity}[2]{%
+\newcommand{#1}[1]{%
+{#2}_{##1}
+}
+}
+
+\newcommand{\newLabeledComponentQuantity}[5]{%
+\newcommand{#1}[1]{%
+\def\temp{##1}
+\def\tempone{1}
+\def\temptwo{2}
+\def\tempthree{3}
+\ifx\temp\tempone%
+{#2}_{#3}
+\else
+\ifx\temp\temptwo%
+{#2}_{#4}
+\else
+\ifx\temp\tempthree%
+{#2}_{#5}
+\else
+{#2}_{##1}
+\fi
+\fi
+\fi
+}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dimensions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -135,10 +185,17 @@
 
 \newQuantity{\qWidth}{w}
 
-% Coordinate systems (include velocities)
-% - Rectangular
-% - Cylindrical
-% - Spherical
+\newComponentQuantity{\qRectangularCoordinate}{x}{y}{z}
+\newComponentQuantity{\qRectangularVelocity}{u}{v}{w}
+
+\newComponentQuantity{\qCylindricalCoordinate}{r}{\phi}{z}
+\newLabeledComponentQuantity{\qCylindricalVelocity}{u}{r}{\phi}{z}
+
+\newComponentQuantity{\qSphericalCoordinate}{r}{\theta}{\phi}
+\newLabeledComponentQuantity{\qSphericalVelocity}{u}{r}{\theta}{\phi}
+
+\newNumberedComponentQuantity{\qCurvilinearCoordinate}{\qCoordinate}
+\newNumberedComponentQuantity{\qCurvilinearVelocity}{\qVelocity}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
