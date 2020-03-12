@@ -224,9 +224,6 @@
 
 \newQuantity{\qContactAngle}{\theta}
 
-\newQuantity{\qDensity}{\rho}
-\newQuantity{\aDensity}{\varrho}
-
 \newQuantity{\qDilatationalViscosity}{\lambda}
 
 \newQuantity{\qDynamicViscosity}{\mu}
@@ -249,6 +246,9 @@
 \newQuantity{\qLinearStrain}{\epsilon}
 
 \newQuantity{\qMass}{m}
+
+\newQuantity{\qMassDensity}{\rho}
+\newQuantity{\aMassDensity}{\varrho}
 
 \newQuantity{\qMassMomentOfInertia}{I}
 
@@ -293,6 +293,9 @@
 \newQuantity{\qWork}{W}
 \newQuantity{\aWork}{A}
 
+
+\newQuantity{\qDensity}{\qMassDensity}
+\newQuantity{\aDensity}{\aMassDensity}
 
 \newQuantity{\qYoungsModulus}{\qTensileModulus}
 
@@ -413,6 +416,78 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Chemistry
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newQuantity{\qActivationEnergy}{E}
+
+\newQuantity{\qAmount}{n}
+
+\newQuantity{\qAmountConcentration}{c}
+
+\newQuantity{\qAmountDensity}{c}
+
+\newQuantity{\qAmountFraction}{X}
+
+\newQuantity{\qAtomicNumber}{Z}
+
+\newLabeledQuantity{\qAvogadroConstant}{N}{\mathrm{A}}
+
+\newLabeledQuantity{\qBoltzmannConstant}{k}{\mathrm{B}}
+
+\newQuantity{\qChemicalPotential}{\mu}
+
+\newLabeledQuantity{\qElectronRestMass}{\qMass}{\mathrm{e}}
+
+\newQuantity{\qEquilibriumConstant}{K}
+
+\newQuantity{\qMeanFreePath}{l}
+
+\newMolarQuantity{\qMolarMass}{\qMass}
+
+\newQuantity{\qMolarGasConstant}{\hat{R}}
+
+\newQuantity{\qMassDiffusivity}{D}
+
+\newQuantity{\qMassNumber}{A}
+
+\newQuantity{\qMassFraction}{Y}
+
+\newQuantity{\qNeutronNumber}{N}
+
+\newLabeledQuantity{\qNeutronRestMass}{\qMass}{\mathrm{n}}
+
+\newQuantity{\qNumberOfEntities}{N}
+
+\newQuantity{\qNumberConcentration}{C}
+
+\newQuantity{\qNumberDensity}{C}
+
+\newQuantity{\qPartialPressure}{\qPressure}
+
+\newQuantity{\qPartitionFunction}{Z}
+
+\newQuantity{\qPlanckConstant}{h}
+
+\newLabeledQuantity{\qProtonRestMass}{\qMass}{\mathrm{p}}
+
+\newQuantity{\qReactionRate}{r}
+
+\newQuantity{\qReactionRateCoefficient}{k}
+
+\newQuantity{\qReducedPlanckConstant}{\hbar}
+
+\newQuantity{\qSpecificGasConstant}{R}
+
+\newQuantity{\qStoichiometricCoefficient}{\nu}
+
+\newQuantity{\qVolumeFraction}{\phi}
+
+
+\newQuantity{\qMoleFraction}{\qAmountFraction}
+
+\newQuantity{\qReactionRateConstant}{\qReactionRateCoefficient}
+
+\newQuantity{\qStoichiometricNumber}{\qStoichiometricCoefficient}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dimensionless numbers
