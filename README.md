@@ -71,6 +71,8 @@ Features (and status)
 
         - Dimensionless numbers (incomplete)
 
+        - Index notation (planned)
+
     - Specialized categories
 
         - Fluid mechanics (planned)
@@ -78,30 +80,59 @@ Features (and status)
 - Package options to change the standardized symbols (planned)
 
 
-How to use `lettsymb`
----------------------
+Usage
+-----
+
+
+### Loading the package
+
+```latex
+\usepackage{lettsymb}
+```
+
+Currently no package options are implemented, but some options are planned to
+give users control over what symbols are used in the standard library.
+
+
+### Creating symbol commands
 
 To create a command, simply use one of the creation commands:
 
-    \newQuantity{\qNumberOfBananas}{b}
+```latex
+\newQuantity{\qNumberOfBananas}{b}
+```
 
-Do not put any superscripts or subscripts in the final argument, since they
-interfere with labels or exponents.
+The first argument is the name of the commands to create, and the second
+argument is the symbol to use.  Do not put any superscripts or subscripts in
+the second argument, since they interfere with labels or exponents.
 
 If the symbol you want to create contains a subscript or a label, use the
 `\newLabeledQuantity` instead:
 
-    \newLabeledQuantity{\qNumberOfApples}{n}{\mathrm{apples}}
+```latex
+\newLabeledQuantity{\qNumberOfApples}{n}{\mathrm{apples}}
+```
 
 This command will correctly place the subscript so that it does not interfere
 with any additional labels.  Additional labels are available via the optional
 argument:
 
-    \qVolume[1]
+```latex
+\qVolume[1]
 
-    \qVolume[\mathrm{cube}]
-    
-    \qVolume[\mathrm{sphere}]
+\qVolume[\mathrm{cube}]
+
+\qVolume[\mathrm{sphere}]
+```
+
+The commands `\newExtensiveQuantity`, `\newSpecificQuantity`, and
+`\newMolarQuantity` are used to create extensive and intensive variables.  They
+follow how `\newQuantity` works but also change the given symbol automatically
+to adjust it to a standardized form, to better distinguish between extensive
+and intensive quantities.
+
+
+### Using symbol commands
 
 To use any symbol command from the standard library, you first must know its
 name.  All names in the standard library follow a simple pattern:
@@ -132,6 +163,35 @@ Examples:
 - `\qLength` is the command for the preferred symbol for the quantity of length
   and `\aLength` is the command for the alternative symbol for the quantity of
   length.
+
+Finally, you can use any command just as you would use any variable.
+
+```latex
+The speed of sound of an ideal gas is a function of the heat capacity ratio,
+the specific gas constant, and the temperature:
+%
+\begin{equation}
+    \qSpeedOfSound[\mathrm{ig}]^2
+    =
+    \qHeatCapacityRatio
+    \qSpecificGasConstant
+    \qTemperature
+    \,.
+\end{equation}
+```
+
+```latex
+\begin{equation}
+    \qDensity
+    =
+    \frac{
+        \qMass
+    }{
+        \qVolume
+    }
+    \,.
+\end{equation}
+```
 
 -------------------------------------------------------------------------------
 
