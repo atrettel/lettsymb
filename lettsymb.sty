@@ -7,7 +7,21 @@
 \RequirePackage{amsmath}
 \RequirePackage{bm}
 
-\ExecuteOptions{default}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newif\ifUseBMBold
+
+\DeclareOption{bm}{
+\UseBMBoldtrue
+}
+
+\DeclareOption{pmb}{
+\UseBMBoldfalse
+}
+
+\ExecuteOptions{bm}
 
 \ProcessOptions\relax
 
@@ -115,9 +129,15 @@
 \newLabeledQuantity{#1}{\mathrm{#2}}{#3}
 }
 
+\ifUseBMBold
 \newcommand{\newVectorQuantity}[2]{%
 \newQuantity{#1}{\bm{#2}}
 }
+\else
+\newcommand{\newVectorQuantity}[2]{%
+\newQuantity{#1}{\pmb{#2}}
+}
+\fi
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -232,7 +252,12 @@
 
 \newComponentQuantity{\qRectangularCoordinate}{x}{y}{z}
 \newComponentQuantity{\qRectangularVelocity}{u}{v}{w}
+
+\ifUseBMBold
 \newComponentQuantity{\vRectangularUnitVector}{\hat{\bm{i}}}{\hat{\bm{j}}}{\hat{\bm{k}}}
+\else
+\newComponentQuantity{\vRectangularUnitVector}{\pmb{\hat{i}}}{\pmb{\hat{j}}}{\pmb{\hat{k}}}
+\fi
 
 \newComponentQuantity{\qCylindricalCoordinate}{r}{\phi}{z}
 \newLabeledComponentQuantity{\qCylindricalVelocity}{u}{r}{\phi}{z}
