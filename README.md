@@ -39,6 +39,10 @@ Features (and status)
 
         - `\newMolarQuantity` (complete)
 
+        - `\newDimensionlessNumber` (complete)
+
+        - `\newLabeledDimensionlessNumber` (complete)
+
     - Vectors and matrices
 
         - `\newVectorQuantity` (planned)
@@ -65,7 +69,7 @@ Features (and status)
 
         - Electromagnetism (incomplete)
         
-        - Light and radiation (planned)
+        - Light and radiation (incomplete)
         
         - Chemistry (incomplete)
 
