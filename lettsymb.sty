@@ -108,6 +108,14 @@
 \newQuantity{#1}{\hat{\lowercase{#2}}}
 }
 
+\newcommand{\newDimensionlessNumber}[2]{%
+\newQuantity{#1}{\mathrm{#2}}
+}
+
+\newcommand{\newLabeledDimensionlessNumber}[3]{%
+\newLabeledQuantity{#1}{\mathrm{#2}}{#3}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dimensions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -532,9 +540,78 @@
 % Dimensionless numbers
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newQuantity{\qMachNumber}{M}
+\newDimensionlessNumber{\qAlfvenNumber}{Al}
 
-\newQuantity{\qReynoldsNumber}{R}
+\newDimensionlessNumber{\qBiotNumber}{Bi}
+
+\newDimensionlessNumber{\qBondNumber}{Bo}
+
+\newDimensionlessNumber{\qCauchyNumber}{Ca}
+
+\newDimensionlessNumber{\qDamkoehlerNumber}{Da}
+
+\newDimensionlessNumber{\qDeanNumber}{De}
+
+\newDimensionlessNumber{\qEckertNumber}{Ec}
+
+\newDimensionlessNumber{\qEkmanNumber}{Ek}
+
+\newDimensionlessNumber{\qEulerNumber}{Eu}
+
+\newDimensionlessNumber{\qFourierNumber}{Fo}
+
+\newDimensionlessNumber{\qFroudeNumber}{Fr}
+
+\newDimensionlessNumber{\qGraetzNumber}{Gz}
+
+\newDimensionlessNumber{\qGrashofNumber}{Gr}
+
+\newDimensionlessNumber{\qHartmannNumber}{Ha}
+
+\newDimensionlessNumber{\qKnudsenNumber}{Kn}
+
+\newDimensionlessNumber{\qLewisNumber}{Le}
+
+\newDimensionlessNumber{\qMachNumber}{Ma}
+
+\newDimensionlessNumber{\qNusseltNumber}{Nu}
+
+\newDimensionlessNumber{\qOhnesorgeNumber}{Oh}
+
+\newDimensionlessNumber{\qPecletNumber}{P\'e}
+
+\newDimensionlessNumber{\qPrandtlNumber}{Pr}
+
+\newDimensionlessNumber{\qRayleighNumber}{Ra}
+
+\newDimensionlessNumber{\qReynoldsNumber}{Re}
+
+\newDimensionlessNumber{\qRichardsonNumber}{Ri}
+
+\newDimensionlessNumber{\qRossbyNumber}{Ro}
+
+\newDimensionlessNumber{\qSchmidtNumber}{Sc}
+
+\newDimensionlessNumber{\qSherwoodNumber}{Sh}
+
+\newDimensionlessNumber{\qStantonNumber}{St}
+
+\newDimensionlessNumber{\qStrouhalNumber}{Sr}
+
+\newDimensionlessNumber{\qTaylorNumber}{Ta}
+
+\newDimensionlessNumber{\qWeberNumber}{We}
+
+
+\newLabeledDimensionlessNumber{\qMassTransferFourierNumber}{Fo}{*}
+
+\newLabeledDimensionlessNumber{\qMassTransferGrashofNumber}{Gr}{*}
+
+\newLabeledDimensionlessNumber{\qMassTransferNusseltNumber}{Nu}{*}
+
+\newLabeledDimensionlessNumber{\qMassTransferPecletNumber}{P\'e}{*}
+
+\newLabeledDimensionlessNumber{\qMassTransferStantonNumber}{St}{*}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
