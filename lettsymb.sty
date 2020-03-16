@@ -327,6 +327,7 @@
 \newQuantity{\aThermalConductivity}{k}
 
 \newQuantity{\qThermalDiffusivity}{\alpha}
+\newQuantity{\aThermalDiffusivity}{\kappa}
 
 
 \newExtensiveQuantity{\qEnthalpy}{H}
@@ -486,7 +487,8 @@
 
 \newQuantity{\qEquilibriumConstant}{K}
 
-\newQuantity{\qMeanFreePath}{l}
+\newQuantity{\qMeanFreePath}{\lambda}
+\newQuantity{\aMeanFreePath}{l}
 
 \newMolarQuantity{\qMolarMass}{\qMass}
 
@@ -612,6 +614,70 @@
 \newLabeledDimensionlessNumber{\qMassTransferPecletNumber}{P\'e}{*}
 
 \newLabeledDimensionlessNumber{\qMassTransferStantonNumber}{St}{*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fluid mechanics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newQuantity{\qAngleOfAttack}{\alpha}
+
+\newQuantity{\qCirculation}{\Gamma}
+\newQuantity{\aCirculation}{K}
+
+\newQuantity{\qComplexPotential}{w}
+
+\newQuantity{\qDrag}{D}
+
+\newLabeledQuantity{\qDragCoefficient}{C}{\mathrm{D}}
+
+\newQuantity{\qFrictionFactor}{f}
+
+\newLabeledQuantity{\qFrictionVelocity}{u}{\tau}
+
+\newQuantity{\qHead}{h}
+
+\newQuantity{\qLift}{L}
+
+\newLabeledQuantity{\qLiftCoefficient}{C}{\mathrm{L}}
+
+\newQuantity{\qMachAngle}{\mu}
+
+\newLabeledQuantity{\qPressureCoefficient}{C}{\mathrm{p}}
+
+\newQuantity{\qShapeFactor}{H}
+
+\newQuantity{\qMassFlowRate}{\dot{m}}
+
+\newQuantity{\qRoughnessHeight}{k}
+
+\newQuantity{\qShearLayerThickness}{\delta}
+
+\newQuantity{\qStreamFunction}{\psi}
+
+\newQuantity{\qThrust}{T}
+
+\newQuantity{\qVelocityPotential}{\phi}
+
+\newQuantity{\qVolumetricFlowRate}{Q}
+
+\newQuantity{\qVorticity}{\omega}
+
+\newLabeledQuantity{\qWallShearStress}{\qShearStress}{\mathrm{w}}
+
+
+\newQuantity{\qBoundaryLayerThickness}{\qShearLayerThickness}
+
+\newLabeledQuantity{\qDisplacementThickness}{\qBoundaryLayerThickness}{1}
+\newLabeledQuantity{\aDisplacementThickness}{\qBoundaryLayerThickness}{*}
+
+\newLabeledQuantity{\qMomentumThickness}{\qBoundaryLayerThickness}{2}
+\newQuantity{\aMomentumThickness}{\theta}
+
+\newLabeledQuantity{\qEnergyThickness}{\qBoundaryLayerThickness}{2}
+
+
+\newLabeledComponentQuantity{\qRectangularVorticity}{\qVorticity}{x}{y}{z}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
