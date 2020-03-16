@@ -6,7 +6,6 @@
 
 \RequirePackage{amsmath}
 \RequirePackage{bm}
-\RequirePackage{ulem}
 
 \ExecuteOptions{default}
 
@@ -116,6 +115,11 @@
 \newLabeledQuantity{#1}{\mathrm{#2}}{#3}
 }
 
+\newcommand{\newVectorQuantity}[2]{%
+\newQuantity{#1}{\bm{#2}}
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dimensions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -155,6 +159,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newQuantity{\qAcceleration}{a}
+\newVectorQuantity{\vAcceleration}{a}
 
 \newQuantity{\qAngularAcceleration}{\alpha}
 
@@ -165,6 +170,7 @@
 \newQuantity{\qAngularVelocity}{\omega}
 
 \newQuantity{\qAngularWavenumber}{k}
+\newVectorQuantity{\vAngularWavenumber}{k}
 
 \newQuantity{\qArcLength}{s}
 
@@ -173,6 +179,7 @@
 \newQuantity{\qBreadth}{b}
 
 \newQuantity{\qCoordinate}{x}
+\newVectorQuantity{\vCoordinate}{x}
 
 \newQuantity{\qDepth}{d}
 
@@ -192,6 +199,7 @@
 \newQuantity{\qPlaneAngle}{\theta}
 
 \newQuantity{\qPosition}{r}
+\newVectorQuantity{\vPosition}{r}
 
 \newQuantity{\qRadius}{r}
 \newQuantity{\aRadius}{R}
@@ -211,17 +219,20 @@
 \newQuantity{\qTime}{t}
 
 \newQuantity{\qVelocity}{u}
+\newVectorQuantity{\vVelocity}{u}
 
 \newQuantity{\qVolume}{V}
 
 \newQuantity{\qWavelength}{\lambda}
 
 \newQuantity{\qWavenumber}{\nu}
+\newVectorQuantity{\vWavenumber}{\nu}
 
 \newQuantity{\qWidth}{w}
 
 \newComponentQuantity{\qRectangularCoordinate}{x}{y}{z}
 \newComponentQuantity{\qRectangularVelocity}{u}{v}{w}
+\newComponentQuantity{\vRectangularUnitVector}{\hat{\bm{i}}}{\hat{\bm{j}}}{\hat{\bm{k}}}
 
 \newComponentQuantity{\qCylindricalCoordinate}{r}{\phi}{z}
 \newLabeledComponentQuantity{\qCylindricalVelocity}{u}{r}{\phi}{z}
@@ -238,6 +249,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newQuantity{\qAngularMomentum}{L}
+\newVectorQuantity{\vAngularMomentum}{L}
 
 \newQuantity{\qAreaMomentOfInertia}{I}
 
@@ -254,6 +266,7 @@
 \newQuantity{\qEnergy}{E}
 
 \newQuantity{\qForce}{F}
+\newVectorQuantity{\vForce}{F}
 
 \newQuantity{\qGravitationalConstant}{G}
 
@@ -276,8 +289,10 @@
 \newQuantity{\qMassMomentOfInertia}{I}
 
 \newQuantity{\qMoment}{M}
+\newVectorQuantity{\vMoment}{M}
 
 \newQuantity{\qMomentum}{p}
+\newVectorQuantity{\vMomentum}{p}
 
 \newQuantity{\qNormalStress}{\sigma}
 
@@ -434,6 +449,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newQuantity{\qElectricFieldStrength}{E}
+\newVectorQuantity{\vElectricFieldStrength}{E}
 
 \newQuantity{\qElectricCharge}{Q}
 
@@ -443,13 +459,18 @@
 
 \newQuantity{\qElectricCurrentDensity}{J}
 
+\newQuantity{\qElectricDisplacement}{D}
+\newVectorQuantity{\vElectricDisplacement}{D}
+
 \newQuantity{\qElectricPermittivity}{\epsilon}
 
 \newQuantity{\qElectricPotential}{V}
 
 \newQuantity{\qMagneticFieldStrength}{H}
+\newVectorQuantity{\vMagneticFieldStrength}{H}
 
 \newQuantity{\qMagneticFluxDensity}{B}
+\newVectorQuantity{\vMagneticFluxDensity}{B}
 
 \newQuantity{\qMagneticPermeability}{\mu}
 
@@ -677,6 +698,7 @@
 \newQuantity{\qVolumetricFlowRate}{Q}
 
 \newQuantity{\qVorticity}{\omega}
+\newVectorQuantity{\vVorticity}{\omega}
 
 \newLabeledQuantity{\qWallShearStress}{\qShearStress}{\mathrm{w}}
 
