@@ -6,12 +6,25 @@
 
 \RequirePackage{amsmath}
 \RequirePackage{bm}
+\RequirePackage{ulem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Options
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% If true, use strikethrough on the V for volume.
+\newif\ifUseStrikethroughVolume
+
+% If true, use bm package for the bold vectors.
 \newif\ifUseBMBold
+
+\DeclareOption{strikethroughvolume}{
+\UseStrikethroughVolumetrue
+}
+
+\DeclareOption{nostrikethroughvolume}{
+\UseStrikethroughVolumefalse
+}
 
 \DeclareOption{bm}{
 \UseBMBoldtrue
@@ -21,7 +34,7 @@
 \UseBMBoldfalse
 }
 
-\ExecuteOptions{bm}
+\ExecuteOptions{bm,nostrikethroughvolume}
 
 \ProcessOptions\relax
 
@@ -241,7 +254,11 @@
 \newQuantity{\qVelocity}{u}
 \newVectorQuantity{\vVelocity}{u}
 
+\ifUseStrikethroughVolume
+\newQuantity{\qVolume}{\text{\sout{\ensuremath{V}}}}
+\else
 \newQuantity{\qVolume}{V}
+\fi
 
 \newQuantity{\qWavelength}{\lambda}
 
@@ -422,7 +439,11 @@
 
 \newSpecificQuantity{\qSpecificQuantityOfHeat}{Q}
 
+\ifUseStrikethroughVolume
+\newSpecificQuantity{\qSpecificVolume}{\text{\sout{\ensuremath{V}}}}
+\else
 \newSpecificQuantity{\qSpecificVolume}{V}
+\fi
 
 
 \newMolarQuantity{\qMolarEnthalpy}{H}
@@ -443,7 +464,11 @@
 
 \newMolarQuantity{\qMolarQuantityOfHeat}{Q}
 
+\ifUseStrikethroughVolume
+\newMolarQuantity{\qMolarVolume}{\text{\sout{\ensuremath{V}}}}
+\else
 \newMolarQuantity{\qMolarVolume}{V}
+\fi
 
 
 \newLabeledQuantity{\qHeatCapacityAtConstantPressure}{\qHeatCapacity}{p}
