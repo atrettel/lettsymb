@@ -8,14 +8,13 @@ physical quantities.
 Purpose
 -------
 
-It is easy to confuse different symbols in science and engineering.  Is the
-letter P the pressure or power here?  Is the letter omega the angular velocity
-or the vorticity here?  The purpose of `lettsymb` is to allow LaTeX users to
-worry more about the content of their documents and less about the
-implementation, especially when particular symbols are complex to implement.
-This package provides a simple set of commands to create custom commands for
-the symbols of quantities, along with a library of commands using standardized
-symbols of quantities.
+`lettsymb` allows LaTeX users to worry more about the content of their
+mathematics and less about the implementation.  This package provides a simple
+set of commands to create custom commands for the symbols of quantities, along
+with a library of commands using standardized symbols of quantities.  Instead
+of typing `F` for force, users can use `\qForce` instead for added clarity.
+These kind of commands allow the document to be read in natural language and
+make changing the notation later much easier.
 
 
 Features (and status)
@@ -43,11 +42,9 @@ Features (and status)
 
         - `\newLabeledDimensionlessNumber` (complete)
 
-    - Vectors and matrices
+    - Vectors
 
-        - `\newVectorQuantity` (planned)
-
-        - `\newMatrixQuantity` (planned)
+        - `\newVectorQuantity` (complete)
 
     - Components of vectors
 
@@ -57,9 +54,13 @@ Features (and status)
 
         - `\newLabeledComponentQuantity` (complete)
 
+    - Index notation (planned)
+
 - A library of standardized symbols for quantities (incomplete)
 
-    - General categories
+    - General subjects
+
+        - Mathematical quantities (incomplete)
 
         - Space and time (incomplete)
         
@@ -77,11 +78,21 @@ Features (and status)
 
         - Index notation (planned)
 
-    - Specialized categories
+    - Specialized subjects
 
-        - Fluid mechanics (planned)
+        - Fluid mechanics (incomplete)
 
-- Package options to change the standardized symbols (planned)
+- Package options to change the standardized symbols (incomplete)
+
+    - `bm` - use `bm` package for bold vector symbols (default)
+
+    - `nostrikethroughvolume` - use a plain V for the symbol for volume
+      (default)
+
+    - `pmb` - use the `\pmb` command from the `amsmath` package for bold vector
+      symbols
+
+    - `strikethroughvolume` - use a strikethrough V for the symbol for volume
 
 
 Usage
@@ -94,27 +105,24 @@ Usage
 \usepackage{lettsymb}
 ```
 
-Currently no package options are implemented, but some options are planned to
-give users control over what symbols are used in the standard library.
-
 
 ### Creating symbol commands
 
 To create a command, simply use one of the creation commands:
 
 ```latex
-\newQuantity{\qNumberOfBananas}{b}
+\newQuantity{\qHeight}{h}
 ```
 
-The first argument is the name of the commands to create, and the second
+The first argument is the name of the command to create, and the second
 argument is the symbol to use.  Do not put any superscripts or subscripts in
 the second argument, since they interfere with labels or exponents.
 
-If the symbol you want to create contains a subscript or a label, use the
+If the symbol you want to create contains a subscript or a label, use
 `\newLabeledQuantity` instead:
 
 ```latex
-\newLabeledQuantity{\qNumberOfApples}{n}{\mathrm{apples}}
+\newLabeledQuantity{\qHeightOfTree}{h}{\mathrm{tree}}
 ```
 
 This command will correctly place the subscript so that it does not interfere
@@ -154,7 +162,8 @@ name.  All names in the standard library follow a simple pattern:
     - `v` for the vector symbol of a quantity.
 
 2. The name of the concept in `CamelCase` (like `SpecificHeat` for "specific
-heat").
+heat").  Note that only ASCII characters are accepted, so quantities like the
+Damköhler number become `\qDamkoehlerNumber`, for example.
 
 Combine these two and you can easily know the command for any given symbol of a
 dimension or quantity.
@@ -168,11 +177,23 @@ Examples:
   and `\aLength` is the command for the alternative symbol for the quantity of
   length.
 
-Finally, you can use any command just as you would use any variable.
+Finally, you can use any symbol command just as you would use any variable when
+writing equations.
 
 ```latex
-The speed of sound of an ideal gas is a function of the heat capacity ratio,
-the specific gas constant, and the temperature:
+Newton's second law is
+%
+\begin{equation}
+    \vForce
+    =
+    \qMass
+    \vAcceleration
+    \,.
+\end{equation}
+```
+
+```latex
+The speed of sound in an ideal gas is
 %
 \begin{equation}
     \qSpeedOfSound[\mathrm{ig}]^2
@@ -186,13 +207,23 @@ the specific gas constant, and the temperature:
 
 ```latex
 \begin{equation}
-    \qDensity
-    =
     \frac{
-        \qMass
+        \partial
+        \qRectangularVelocity{1}
     }{
-        \qVolume
+        \partial
+        \qRectangularCoordinate{1}
     }
+    +
+    \frac{
+        \partial
+        \qRectangularVelocity{2}
+    }{
+        \partial
+        \qRectangularCoordinate{2}
+    }
+    =
+    0
     \,.
 \end{equation}
 ```
