@@ -162,8 +162,9 @@ name.  All names in the standard library follow a simple pattern:
     - `v` for the vector symbol of a quantity.
 
 2. The name of the concept in `CamelCase` (like `SpecificHeat` for "specific
-heat").  Note that only ASCII characters are accepted, so quantities like the
-Damköhler number become `\qDamkoehlerNumber`, for example.
+heat").  Note that only ASCII letters are accepted, so "Damköhler number"
+becomes `DamkoehlerNumber`, for example.  Apostrophes, dashes, and other
+punctuation are also dropped ("Poisson's ratio" becomes `PoissonsRatio`).
 
 Combine these two and you can easily know the command for any given symbol of a
 dimension or quantity.
