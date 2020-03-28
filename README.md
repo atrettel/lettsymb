@@ -54,7 +54,9 @@ Features (and status)
 
         - `\newLabeledComponentQuantity` (complete)
 
-    - Index notation (planned)
+    - Index notation
+
+        - `\newIndexNotationQuantity` (complete)
 
 - A library of standardized symbols for quantities (incomplete)
 
@@ -76,7 +78,7 @@ Features (and status)
 
         - Dimensionless numbers (incomplete)
 
-        - Index notation (planned)
+        - Index notation (incomplete)
 
     - Specialized subjects
 
@@ -161,6 +163,8 @@ name.  All names in the standard library follow a simple pattern:
 
     - `v` for the vector symbol of a quantity.
 
+    - `i` for the index notation symbol of a quantity.
+
 2. The name of the concept in `CamelCase` (like `SpecificHeat` for "specific
 heat").  Note that only ASCII letters are accepted, so "Damköhler number"
 becomes `DamkoehlerNumber`, for example.  Apostrophes, dashes, and other
@@ -228,6 +232,30 @@ The speed of sound in an ideal gas is
     \,.
 \end{equation}
 ```
+
+
+### Using index notation (summation convention)
+
+Index notation commands operate differently.  Each index notation command
+accepts the lower indices as the required argument and the upper indices as the
+optional argument.  Many writers only use the lower indices (for rectangular
+coordinates only), so this choice minimizes the amount of typing for that
+particular case while still allowing for more general usage.
+
+```latex
+\begin{equation}
+    \iAlternatingSymbol{ijk}
+    \iAlternatingSymbol[imn]{}
+    =
+    \iKroneckerDelta[m]{j}
+    \iKroneckerDelta[n]{k}
+    -
+    \iKroneckerDelta[n]{j}
+    \iKroneckerDelta[m]{k}
+    \,.
+\end{equation}
+```
+
 
 -------------------------------------------------------------------------------
 
