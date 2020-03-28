@@ -165,6 +165,16 @@
 }
 \fi
 
+\newcommand{\newIndexNotationQuantity}[2]{%
+\newcommand{#1}[2][]{%
+\def\temp{##1} \ifx\temp\empty%
+{#2}_{##2}
+\else
+{#2}^{##1}_{##2}
+\fi
+}
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dimensions
@@ -713,6 +723,18 @@
 \newLabeledDimensionlessNumber{\qMassTransferPecletNumber}{Pe}{*}
 
 \newLabeledDimensionlessNumber{\qMassTransferStantonNumber}{St}{*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Index notation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newIndexNotationQuantity{\iKroneckerDelta}{\delta}
+
+\newIndexNotationQuantity{\iPermutationSymbol}{\epsilon}
+
+
+\newIndexNotationQuantity{\iLeviCivitaSymbol}{\iPermutationSymbol{}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
