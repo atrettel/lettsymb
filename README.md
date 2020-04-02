@@ -151,19 +151,27 @@ and intensive quantities.
 To use any symbol command from the standard library, you first must know its
 name.  All names in the standard library follow a simple pattern:
 
-1. A letter denoting the type of the symbol.
+1. A letter denoting the type of the symbol.  Different prefixes often require
+different arguments, optional and otherwise.
 
-    - `d` for symbol of a dimension.
+    - `d` for symbol of a dimension.  The optional argument is the exponent.
 
-    - `q` for the preferred symbol of a quantity.
+    - `q` for the preferred symbol of a quantity.  The optional argument is the
+      label.
 
     - `a` for the alternative symbol of a quantity.  Alternative symbols can be
       used when you need two symbols for a type of quantity or when another
-      quantity uses the same symbol as the preferred symbol.
+      quantity uses the same symbol as the preferred symbol.  The optional
+      argument is the label.
 
-    - `v` for the vector symbol of a quantity.
+    - `v` for the vector symbol of a quantity.  The optional argument is the
+      label.
 
-    - `i` for the index notation symbol of a quantity.
+    - `c` for the component symbol of a vector quantity.  The required argument
+      is the dimension number.
+
+    - `i` for the index notation symbol of a quantity.  The required argument
+      is the lower indices and the optional argument is the upper indices.
 
 2. The name of the concept in `CamelCase` (like `SpecificHeat` for "specific
 heat").  Note that only ASCII letters are accepted, so "Damköhler number"
@@ -214,18 +222,18 @@ The speed of sound in an ideal gas is
 \begin{equation}
     \frac{
         \partial
-        \qRectangularVelocity{1}
+        \cRectangularVelocity{1}
     }{
         \partial
-        \qRectangularCoordinate{1}
+        \cRectangularCoordinate{1}
     }
     +
     \frac{
         \partial
-        \qRectangularVelocity{2}
+        \cRectangularVelocity{2}
     }{
         \partial
-        \qRectangularCoordinate{2}
+        \cRectangularCoordinate{2}
     }
     =
     0
