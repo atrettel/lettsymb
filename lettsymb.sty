@@ -294,23 +294,23 @@
 
 \newQuantity{\qWidth}{w}
 
-\newComponentQuantity{\qRectangularCoordinate}{x}{y}{z}
-\newComponentQuantity{\qRectangularVelocity}{u}{v}{w}
+\newComponentQuantity{\cRectangularCoordinate}{x}{y}{z}
+\newComponentQuantity{\cRectangularVelocity}{u}{v}{w}
 
 \ifUseBMBold
-\newComponentQuantity{\vRectangularUnitVector}{\hat{\bm{i}}}{\hat{\bm{j}}}{\hat{\bm{k}}}
+\newComponentQuantity{\cRectangularUnitVector}{\hat{\bm{i}}}{\hat{\bm{j}}}{\hat{\bm{k}}}
 \else
-\newComponentQuantity{\vRectangularUnitVector}{\pmb{\hat{i}}}{\pmb{\hat{j}}}{\pmb{\hat{k}}}
+\newComponentQuantity{\cRectangularUnitVector}{\pmb{\hat{i}}}{\pmb{\hat{j}}}{\pmb{\hat{k}}}
 \fi
 
-\newComponentQuantity{\qCylindricalCoordinate}{r}{\phi}{z}
-\newLabeledComponentQuantity{\qCylindricalVelocity}{u}{r}{\phi}{z}
+\newComponentQuantity{\cCylindricalCoordinate}{r}{\phi}{z}
+\newLabeledComponentQuantity{\cCylindricalVelocity}{u}{r}{\phi}{z}
 
-\newComponentQuantity{\qSphericalCoordinate}{r}{\theta}{\phi}
-\newLabeledComponentQuantity{\qSphericalVelocity}{u}{r}{\theta}{\phi}
+\newComponentQuantity{\cSphericalCoordinate}{r}{\theta}{\phi}
+\newLabeledComponentQuantity{\cSphericalVelocity}{u}{r}{\theta}{\phi}
 
-\newNumberedComponentQuantity{\qCurvilinearCoordinate}{\qCoordinate}
-\newNumberedComponentQuantity{\qCurvilinearVelocity}{\qVelocity}
+\newNumberedComponentQuantity{\cCurvilinearCoordinate}{\qCoordinate}
+\newNumberedComponentQuantity{\cCurvilinearVelocity}{\qVelocity}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -818,7 +818,7 @@
 \newLabeledQuantity{\qEnergyThickness}{\qBoundaryLayerThickness}{2}
 
 
-\newLabeledComponentQuantity{\qRectangularVorticity}{\qVorticity}{x}{y}{z}
+\newLabeledComponentQuantity{\cRectangularVorticity}{\qVorticity}{x}{y}{z}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
