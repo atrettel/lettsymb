@@ -147,6 +147,10 @@
 \newQuantity{#1}{\hat{\lowercase{#2}}}
 }
 
+\newcommand{\newSpecificTotalQuantity}[2]{%
+\newLabeledQuantity{#1}{\lowercase{#2}}{\mathrm{tot}}
+}
+
 \newcommand{\newDimensionlessNumber}[2]{%
 \newQuantity{#1}{\mathrm{#2}}
 }
@@ -518,6 +522,13 @@
 \else
 \newMolarQuantity{\qMolarVolume}{V}
 \fi
+
+
+\newSpecificTotalQuantity{\qSpecificTotalEnthalpy}{H}
+
+\newSpecificTotalQuantity{\qSpecificTotalInternalEnergy}{E}
+\newSpecificTotalQuantity{\aSpecificTotalInternalEnergy}{U}
+
 
 
 \newLabeledQuantity{\qHeatCapacityAtConstantPressure}{\qHeatCapacity}{p}
