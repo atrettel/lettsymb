@@ -296,6 +296,8 @@
 
 \newComponentQuantity{\cRectangularCoordinate}{x}{y}{z}
 \newComponentQuantity{\cRectangularVelocity}{u}{v}{w}
+\newIndexNotationQuantity{\iRectangularCoordinate}{x}
+\newIndexNotationQuantity{\iRectangularVelocity}{u}
 
 \ifUseBMBold
 \newComponentQuantity{\cRectangularUnitVector}{\hat{\bm{i}}}{\hat{\bm{j}}}{\hat{\bm{k}}}
@@ -309,8 +311,11 @@
 \newComponentQuantity{\cSphericalCoordinate}{r}{\theta}{\phi}
 \newLabeledComponentQuantity{\cSphericalVelocity}{u}{r}{\theta}{\phi}
 
-\newNumberedComponentQuantity{\cCurvilinearCoordinate}{\qCoordinate}
-\newNumberedComponentQuantity{\cCurvilinearVelocity}{\qVelocity}
+\newNumberedComponentQuantity{\cCurvilinearCoordinate}{q}
+\newComponentQuantity{\aCurvilinearCoordinate}{\xi}{\eta}{\zeta}
+\newNumberedComponentQuantity{\cCurvilinearVelocity}{u}
+\newIndexNotationQuantity{\iCurvilinearCoordinate}{q}
+\newIndexNotationQuantity{\iCurvilinearVelocity}{u}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -328,6 +333,11 @@
 \newQuantity{\qBulkViscosity}{\zeta}
 
 \newQuantity{\qContactAngle}{\theta}
+
+\newQuantity{\qDeviatoricStress}{d}
+\newIndexNotationQuantity{\iDeviatoricStress}{d}
+
+\newQuantity{\qDilatationRate}{\Delta}
 
 \newQuantity{\qDilatationalViscosity}{\lambda}
 
@@ -349,8 +359,6 @@
 \newQuantity{\aKineticEnergy}{K}
 
 \newQuantity{\qLagrangianFunction}{L}
-
-\newQuantity{\qLinearStrain}{\epsilon}
 
 \newQuantity{\qMass}{m}
 
@@ -391,8 +399,8 @@
 \newQuantity{\qSpeedOfSound}{a}
 \newQuantity{\aSpeedOfSound}{c}
 
-\newQuantity{\qStrain}{\epsilon}
-\newIndexNotationQuantity{\iStrain}{\epsilon}
+\newQuantity{\qStrain}{\varepsilon}
+\newIndexNotationQuantity{\iStrain}{\varepsilon}
 
 \newQuantity{\qStress}{\sigma}
 \newIndexNotationQuantity{\iStress}{\sigma}
@@ -412,6 +420,11 @@
 
 \newQuantity{\qDensity}{\qMassDensity}
 \newQuantity{\aDensity}{\aMassDensity}
+
+\newQuantity{\qLinearStrain}{\qStrain}
+
+\newQuantity{\qStrainRate}{\dot{\qStrain}}
+\newIndexNotationQuantity{\iStrainRate}{\dot{\qStrain}}
 
 \newQuantity{\qYoungsModulus}{\qTensileModulus}
 
@@ -619,6 +632,8 @@
 \newMolarQuantity{\qMolarMass}{\qMass}
 
 \newQuantity{\qMolarGasConstant}{\hat{R}}
+
+\newQuantity{\qMassConcentration}{\qDensity}
 
 \newQuantity{\qMassDiffusivity}{D}
 
