@@ -254,7 +254,8 @@
 
 \newQuantity{\qHeight}{h}
 
-\newQuantity{\qLength}{l}
+\newQuantity{\qLength}{\ell}
+\newQuantity{\aLength}{l}
 
 \newQuantity{\qPeriod}{T}
 
@@ -809,9 +810,13 @@
 
 \newQuantity{\qFrictionFactor}{f}
 
-\newLabeledQuantity{\qFrictionVelocity}{\qVelocity}{\tau}
+\newLabeledQuantity{\qFrictionVelocity}{\qVelocity}{\qShearStress}
 
 \newQuantity{\qHead}{h}
+
+\newLabeledQuantity{\qLawOfTheWallCoordinate}{\cRectangularCoordinate{2}}{+}
+
+\newLabeledQuantity{\qLawOfTheWallVelocity}{\cRectangularVelocity{1}}{+}
 
 \newQuantity{\qLift}{L}
 
@@ -840,6 +845,8 @@
 \newIndexNotationQuantity{\iVectorPotential}{B}
 
 \newQuantity{\qVelocityPotential}{\phi}
+
+\newLabeledQuantity{\qViscousLengthScale}{\qLength}{\qKinematicViscosity}
 
 \newQuantity{\qVolumetricFlowRate}{Q}
 
