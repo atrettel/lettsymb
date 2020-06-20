@@ -809,7 +809,7 @@
 
 \newQuantity{\qFrictionFactor}{f}
 
-\newLabeledQuantity{\qFrictionVelocity}{u}{\tau}
+\newLabeledQuantity{\qFrictionVelocity}{\qVelocity}{\tau}
 
 \newQuantity{\qHead}{h}
 
@@ -862,6 +862,15 @@
 
 
 \newLabeledComponentQuantity{\cRectangularVorticity}{\qVorticity}{x}{y}{z}
+
+
+\newQuantity{\qDissipationLengthScale}{\eta}
+\newLabeledQuantity{\qDissipationTimeScale}{\tau}{\qDissipationLengthScale}
+\newLabeledQuantity{\qDissipationVelocityScale}{\qVelocity}{\qDissipationLengthScale}
+
+\newQuantity{\qKolmogorovLengthScale}{\eta}
+\newLabeledQuantity{\qKolmogorovTimeScale}{\tau}{\qDissipationLengthScale}
+\newLabeledQuantity{\qKolmogorovVelocityScale}{\qVelocity}{\qDissipationLengthScale}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
