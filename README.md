@@ -264,6 +264,11 @@ particular case while still allowing for more general usage.
 \end{equation}
 ```
 
+TODO: Switch from this interface to something like `\iQuantity{iJ}`, where `i`
+is a lower index and `J` is an upper index.  Using lowercase
+letters for lower indices and uppercase letters for upper indices should
+simplify the use of these commands.
+
 
 -------------------------------------------------------------------------------
 
