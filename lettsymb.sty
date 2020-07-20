@@ -215,6 +215,35 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mathematical operations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\sDerivative}{\mathrm{d}}
+\newcommand{\sMaterialDerivative}{\mathrm{D}}
+\newcommand{\sPartialDerivative}{\partial}
+
+\newcommand{\oDerivative}[3][]{%
+\def\temp{#1} \ifx\temp\empty%
+\frac{\sDerivative #2}{\sDerivative #3}
+\else
+\frac{\sDerivative^{#1} #2}{\sDerivative {#3}^{#1}}
+\fi
+}
+
+\newcommand{\oDifferential}[1]{%
+\sDerivative #1
+}
+
+\newcommand{\oPartialDerivative}[3][]{%
+\def\temp{#1} \ifx\temp\empty%
+\frac{\sPartialDerivative #2}{\sPartialDerivative #3}
+\else
+\frac{\sPartialDerivative^{#1} #2}{\sPartialDerivative {#3}^{#1}}
+\fi
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Space and time (kinematics)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -878,6 +907,11 @@
 \newQuantity{\qKolmogorovLengthScale}{\eta}
 \newLabeledQuantity{\qKolmogorovTimeScale}{\tau}{\qDissipationLengthScale}
 \newLabeledQuantity{\qKolmogorovVelocityScale}{\qVelocity}{\qDissipationLengthScale}
+
+
+\newcommand{\oMaterialDerivative}[1]{%
+\frac{\sMaterialDerivative #1}{\sMaterialDerivative \qTime}
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
