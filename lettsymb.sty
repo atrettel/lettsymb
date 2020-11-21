@@ -51,6 +51,34 @@
 
 \ProcessOptions\relax
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Labels
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\lConstant}{\mathrm{const.}}
+\newcommand{\lMaximum}{\mathrm{max}}
+\newcommand{\lMinimum}{\mathrm{min}}
+\newcommand{\lReference}{r}
+\newcommand{\lRootMeanSquare}{\mathrm{rms}}
+\newcommand{\lTotal}{\mathrm{tot}}
+
+\newcommand{\lAdiabaticWall}{\mathrm{aw}}
+\newcommand{\lBulk}{b}
+\newcommand{\lCenterLine}{c}
+\newcommand{\lEdge}{e}
+\newcommand{\lFarField}{\infty}
+\newcommand{\lInlet}{\mathrm{in}}
+\newcommand{\lInner}{\mathrm{in}}
+\newcommand{\lOuter}{\mathrm{out}}
+\newcommand{\lOutlet}{\mathrm{out}}
+\newcommand{\lWall}{w}
+
+\newcommand{\lInitial}{0}
+\newcommand{\lFinal}{f}
+
+\newcommand{\lWallUnits}{+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Commands
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -148,7 +176,7 @@
 }
 
 \newcommand{\newSpecificTotalQuantity}[2]{%
-\newLabeledQuantity{#1}{\lowercase{#2}}{\mathrm{tot}}
+\newLabeledQuantity{#1}{\lowercase{#2}}{\lTotal}
 }
 
 \newcommand{\newDimensionlessNumber}[2]{%
