@@ -207,6 +207,11 @@
 }
 }
 
+\newcommand{\newIndexNotationPair}[3]{%
+\newIndexNotationQuantity{#1}{#3}
+\newIndexNotationQuantity{#2}{\bar{#3}}
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dimensions
@@ -289,7 +294,7 @@
 
 \newQuantity{\qAcceleration}{a}
 \newVectorQuantity{\vAcceleration}{a}
-\newIndexNotationQuantity{\iAcceleration}{a}
+\newIndexNotationPair{\iAcceleration}{\tAcceleration}{a}
 
 \newQuantity{\qAngularAcceleration}{\alpha}
 
@@ -310,7 +315,7 @@
 
 \newQuantity{\qCoordinate}{x}
 \newVectorQuantity{\vCoordinate}{x}
-\newIndexNotationQuantity{\iCoordinate}{x}
+\newIndexNotationPair{\iCoordinate}{\tCoordinate}{x}
 
 \newQuantity{\qDepth}{d}
 
@@ -332,7 +337,7 @@
 
 \newQuantity{\qPosition}{r}
 \newVectorQuantity{\vPosition}{r}
-\newIndexNotationQuantity{\iPosition}{r}
+\newIndexNotationPair{\iPosition}{\tPosition}{r}
 
 \newQuantity{\qRadius}{r}
 \newQuantity{\aRadius}{R}
@@ -353,7 +358,7 @@
 
 \newQuantity{\qVelocity}{u}
 \newVectorQuantity{\vVelocity}{u}
-\newIndexNotationQuantity{\iVelocity}{u}
+\newIndexNotationPair{\iVelocity}{\tVelocity}{u}
 
 \ifUseStrikethroughVolume
 \newQuantity{\qVolume}{\text{\sout{\ensuremath{V}}}}
@@ -423,7 +428,7 @@
 
 \newQuantity{\qAngularMomentum}{L}
 \newVectorQuantity{\vAngularMomentum}{L}
-\newIndexNotationQuantity{\iAngularMomentum}{L}
+\newIndexNotationPair{\iAngularMomentum}{\tAngularMomentum}{L}
 
 \newQuantity{\qAreaMomentOfInertia}{I}
 
@@ -434,7 +439,7 @@
 \newQuantity{\qContactAngle}{\theta}
 
 \newQuantity{\qDeviatoricStress}{d}
-\newIndexNotationQuantity{\iDeviatoricStress}{d}
+\newIndexNotationPair{\iDeviatoricStress}{\tDeviatoricStress}{d}
 
 \newQuantity{\qDilatationRate}{\Delta}
 
@@ -446,7 +451,7 @@
 
 \newQuantity{\qForce}{F}
 \newVectorQuantity{\vForce}{F}
-\newIndexNotationQuantity{\iForce}{F}
+\newIndexNotationPair{\iForce}{\tForce}{F}
 
 \newQuantity{\qGravitationalConstant}{G}
 
@@ -468,14 +473,14 @@
 
 \newQuantity{\qMoment}{M}
 \newVectorQuantity{\vMoment}{M}
-\newIndexNotationQuantity{\iMoment}{M}
+\newIndexNotationPair{\iMoment}{\tMoment}{M}
 
 \newQuantity{\qMomentum}{p}
 \newVectorQuantity{\vMomentum}{p}
-\newIndexNotationQuantity{\iMomentum}{p}
+\newIndexNotationPair{\iMomentum}{\tMomentum}{p}
 
 \newQuantity{\qNormalStress}{\sigma}
-\newIndexNotationQuantity{\iNormalStress}{\sigma}
+\newIndexNotationPair{\iNormalStress}{\tNormalStress}{\sigma}
 
 \newQuantity{\qPoissonsRatio}{\nu}
 
@@ -490,19 +495,19 @@
 \newQuantity{\qShearModulus}{G}
 
 \newQuantity{\qShearStrain}{\gamma}
-\newIndexNotationQuantity{\iShearStrain}{\gamma}
+\newIndexNotationPair{\iShearStrain}{\tShearStrain}{\gamma}
 
 \newQuantity{\qShearStress}{\tau}
-\newIndexNotationQuantity{\iShearStress}{\tau}
+\newIndexNotationPair{\iShearStress}{\tShearStress}{\tau}
 
 \newQuantity{\qSpeedOfSound}{a}
 \newQuantity{\aSpeedOfSound}{c}
 
 \newQuantity{\qStrain}{\varepsilon}
-\newIndexNotationQuantity{\iStrain}{\varepsilon}
+\newIndexNotationPair{\iStrain}{\tStrain}{\varepsilon}
 
 \newQuantity{\qStress}{\sigma}
-\newIndexNotationQuantity{\iStress}{\sigma}
+\newIndexNotationPair{\iStress}{\tStress}{\sigma}
 
 \newQuantity{\qSurfaceTension}{\sigma}
 \newQuantity{\aSurfaceTension}{\gamma}
@@ -523,7 +528,7 @@
 \newQuantity{\qLinearStrain}{\qStrain}
 
 \newQuantity{\qStrainRate}{\dot{\qStrain}}
-\newIndexNotationQuantity{\iStrainRate}{\dot{\qStrain}}
+\newIndexNotationPair{\iStrainRate}{\tStrainRate}{\dot{\qStrain}}
 
 \newQuantity{\qYoungsModulus}{\qTensileModulus}
 
@@ -667,7 +672,7 @@
 
 \newQuantity{\qElectricFieldStrength}{E}
 \newVectorQuantity{\vElectricFieldStrength}{E}
-\newIndexNotationQuantity{\iElectricFieldStrength}{E}
+\newIndexNotationPair{\iElectricFieldStrength}{\tElectricFieldStength}{E}
 
 \newQuantity{\qElectricCharge}{Q}
 
@@ -679,7 +684,7 @@
 
 \newQuantity{\qElectricDisplacement}{D}
 \newVectorQuantity{\vElectricDisplacement}{D}
-\newIndexNotationQuantity{\iElectricDisplacement}{D}
+\newIndexNotationPair{\iElectricDisplacement}{\tElectricDisplacement}{D}
 
 \newQuantity{\qElectricPermittivity}{\epsilon}
 
@@ -687,11 +692,11 @@
 
 \newQuantity{\qMagneticFieldStrength}{H}
 \newVectorQuantity{\vMagneticFieldStrength}{H}
-\newIndexNotationQuantity{\iMagneticFieldStrength}{H}
+\newIndexNotationPair{\iMagneticFieldStrength}{\tMagneticFieldStrength}{H}
 
 \newQuantity{\qMagneticFluxDensity}{B}
 \newVectorQuantity{\vMagneticFluxDensity}{B}
-\newIndexNotationQuantity{\iMagneticFluxDensity}{B}
+\newIndexNotationPair{\iMagneticFluxDensity}{\tMagneticFluxDensity}{B}
 
 \newQuantity{\qMagneticPermeability}{\mu}
 
@@ -879,13 +884,10 @@
 % Index notation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newIndexNotationQuantity{\iKroneckerDelta}{\delta}
+\newIndexNotationPair{\iKroneckerDelta}{\tKroneckerDelta}{\delta}
 
 \newIndexNotationQuantity{\iPermutationSymbol}{\epsilon}
-
-
 \newIndexNotationQuantity{\iAlternatingSymbol}{\iPermutationSymbol{}}
-
 \newIndexNotationQuantity{\iLeviCivitaSymbol}{\iPermutationSymbol{}}
 
 
@@ -943,7 +945,7 @@
 
 \newQuantity{\qVectorPotential}{B}
 \newVectorQuantity{\vVectorPotential}{B}
-\newIndexNotationQuantity{\iVectorPotential}{B}
+\newIndexNotationPair{\iVectorPotential}{\tVectorPotential}{B}
 
 \newQuantity{\qVelocityPotential}{\phi}
 
@@ -953,7 +955,7 @@
 
 \newQuantity{\qVorticity}{\omega}
 \newVectorQuantity{\vVorticity}{\omega}
-\newIndexNotationQuantity{\iVorticity}{\omega}
+\newIndexNotationPair{\iVorticity}{\tVorticity}{\omega}
 
 \newLabeledQuantity{\qWallShearStress}{\qShearStress}{\mathrm{w}}
 
