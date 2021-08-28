@@ -272,7 +272,7 @@ simplify the use of these commands.
 
 -------------------------------------------------------------------------------
 
-Copyright © 2020 Andrew Trettel
+Copyright © 2020-2021 Andrew Trettel
 
 This work may be distributed and/or modified under the conditions of the LaTeX
 Project Public License, either version 1.3 of this license or (at your option)
