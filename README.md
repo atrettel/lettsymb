@@ -265,14 +265,16 @@ particular case while still allowing for more general usage.
 ```
 
 TODO: Switch from this interface to something like `\iQuantity{iJ}`, where `i`
-is a lower index and `J` is an upper index.  Using lowercase
-letters for lower indices and uppercase letters for upper indices should
-simplify the use of these commands.
+is a lower index and `J` is an upper index.  Using lowercase letters for lower
+indices and uppercase letters for upper indices should simplify the use of
+these commands.  An easy-to-implement alternative is specifying the indices
+with a command like `\udud{i}{j}{k}{l}`, where `u` is for an upper index and
+`d` is for a lower index.
 
 
 -------------------------------------------------------------------------------
 
-Copyright © 2020-2021 Andrew Trettel
+Copyright © 2020-2022 Andrew Trettel
 
 This work may be distributed and/or modified under the conditions of the LaTeX
 Project Public License, either version 1.3 of this license or (at your option)
