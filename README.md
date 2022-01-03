@@ -267,9 +267,10 @@ particular case while still allowing for more general usage.
 TODO: Switch from this interface to something like `\iQuantity{iJ}`, where `i`
 is a lower index and `J` is an upper index.  Using lowercase letters for lower
 indices and uppercase letters for upper indices should simplify the use of
-these commands.  An easy-to-implement alternative is specifying the indices
+these commands.  An easier-to-implement alternative is specifying the indices
 with a command like `\udud{i}{j}{k}{l}`, where `u` is for an upper index and
-`d` is for a lower index.
+`d` is for a lower index.  Note also that this notation can be built into the
+index notation command itself, like `\iuuMetricTensor{i}{j}`, for example.
 
 
 -------------------------------------------------------------------------------
