@@ -286,6 +286,55 @@
 \newLLIndexNotationQuantity{#2}{\bar{#3}}
 }
 
+% Rank three tensors
+\newcommand{\newUUUIndexNotationQuantity}[2]{%
+\newcommand{#1}[3]{%
+{#2}^{{##1}{##2}{##3}}
+}
+}
+
+\newcommand{\newUULIndexNotationQuantity}[2]{%
+\newcommand{#1}[3]{%
+{#2}^{{##1}{##2}}_{\sEmptyIndex\sEmptyIndex} {}_{##3}
+}
+}
+
+\newcommand{\newULLIndexNotationQuantity}[2]{%
+\newcommand{#1}[3]{%
+{#2}^{{##1}}_{\sEmptyIndex} {}_{{##2}{##3}}
+}
+}
+
+\newcommand{\newULUIndexNotationQuantity}[2]{%
+\newcommand{#1}[3]{%
+{#2}^{{##1}}_{\sEmptyIndex} {}^{\sEmptyIndex}_{##2} {}^{##3}
+}
+}
+
+\newcommand{\newLULIndexNotationQuantity}[2]{%
+\newcommand{#1}[3]{%
+{#2}^{\sEmptyIndex}_{{##1}} {}^{##2}_{\sEmptyIndex} {}^{##3}
+}
+}
+
+\newcommand{\newLUUIndexNotationQuantity}[2]{%
+\newcommand{#1}[3]{%
+{#2}^{\sEmptyIndex}_{{##1}} {}^{{##2}{##3}}
+}
+}
+
+\newcommand{\newLLUIndexNotationQuantity}[2]{%
+\newcommand{#1}[3]{%
+{#2}^{\sEmptyIndex\sEmptyIndex}_{{##1}{##2}} {}^{##3}
+}
+}
+
+\newcommand{\newLLLIndexNotationQuantity}[2]{%
+\newcommand{#1}[3]{%
+{#2}_{{##1}{##2}{##3}}
+}
+}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -983,6 +1032,15 @@
 \newLLIndexNotationPair{\illMetricTensor}{\tllMetricTensor}{g}
 \newULIndexNotationPair{\iulMetricTensor}{\tulMetricTensor}{g}
 \newLUIndexNotationPair{\iluMetricTensor}{\tluMetricTensor}{g}
+
+\newUUUIndexNotationQuantity{\iuuuChristoffelSymbol}{\Gamma}
+\newUULIndexNotationQuantity{\iuulChristoffelSymbol}{\Gamma}
+\newULLIndexNotationQuantity{\iullChristoffelSymbol}{\Gamma}
+\newULUIndexNotationQuantity{\iuluChristoffelSymbol}{\Gamma}
+\newLULIndexNotationQuantity{\ilulChristoffelSymbol}{\Gamma}
+\newLUUIndexNotationQuantity{\iluuChristoffelSymbol}{\Gamma}
+\newLLUIndexNotationQuantity{\illuChristoffelSymbol}{\Gamma}
+\newLLLIndexNotationQuantity{\illlChristoffelSymbol}{\Gamma}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
