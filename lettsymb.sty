@@ -31,6 +31,10 @@
 % If true, use bm package for the bold vectors.
 \newif\ifUseBMBold
 
+% The symbol for empty lower subscripts in index notation.
+%\newcommand{\sEmptyLowerSubscript}{~}
+\newcommand{\sEmptyLowerSubscript}{\cdot}
+
 \DeclareOption{strikethroughvolume}{
 \UseStrikethroughVolumetrue
 }
@@ -251,7 +255,7 @@
 
 \newcommand{\newUDIndexNotationQuantity}[2]{%
 \newcommand{#1}[2]{%
-{#2}^{##1}{}_{##2}
+{#2}^{##1}_{\sEmptyLowerSubscript}{}_{##2}
 }
 }
 
