@@ -225,20 +225,10 @@
 }
 }
 
-\newcommand{\newUIndexNotationPair}[3]{%
-\newUIndexNotationQuantity{#1}{#3}
-\newUIndexNotationQuantity{#2}{\bar{#3}}
-}
-
 \newcommand{\newLIndexNotationQuantity}[2]{%
 \newcommand{#1}[1]{%
 {#2}_{##1}
 }
-}
-
-\newcommand{\newLIndexNotationPair}[3]{%
-\newLIndexNotationQuantity{#1}{#3}
-\newLIndexNotationQuantity{#2}{\bar{#3}}
 }
 
 % Rank two tensors
@@ -256,20 +246,10 @@
 }
 }
 
-\newcommand{\newUUIndexNotationPair}[3]{%
-\newUUIndexNotationQuantity{#1}{#3}
-\newUUIndexNotationQuantity{#2}{\bar{#3}}
-}
-
 \newcommand{\newULIndexNotationQuantity}[2]{%
 \newcommand{#1}[2]{%
 {#2}^{##1} {}_{##2}
 }
-}
-
-\newcommand{\newULIndexNotationPair}[3]{%
-\newULIndexNotationQuantity{#1}{#3}
-\newULIndexNotationQuantity{#2}{\bar{#3}}
 }
 
 \newcommand{\newLUIndexNotationQuantity}[2]{%
@@ -278,20 +258,10 @@
 }
 }
 
-\newcommand{\newLUIndexNotationPair}[3]{%
-\newLUIndexNotationQuantity{#1}{#3}
-\newLUIndexNotationQuantity{#2}{\bar{#3}}
-}
-
 \newcommand{\newLLIndexNotationQuantity}[2]{%
 \newcommand{#1}[2]{%
 {#2}_{{##1}{##2}}
 }
-}
-
-\newcommand{\newLLIndexNotationPair}[3]{%
-\newLLIndexNotationQuantity{#1}{#3}
-\newLLIndexNotationQuantity{#2}{\bar{#3}}
 }
 
 % Rank three tensors
@@ -452,8 +422,11 @@
 \newVectorQuantity{\vCoordinate}{x}
 \newIndexNotationPair{\iCoordinate}{\tCoordinate}{x}
 
-\newUIndexNotationPair{\iuCoordinate}{\tuCoordinate}{x}
-\newLIndexNotationPair{\ilCoordinate}{\tlCoordinate}{x}
+\newUIndexNotationQuantity{\iuCoordinate}{x}
+\newLIndexNotationQuantity{\ilCoordinate}{x}
+
+\newUIndexNotationQuantity{\tuCoordinate}{\oTransformedQuantity{x}}
+\newLIndexNotationQuantity{\tlCoordinate}{\oTransformedQuantity{x}}
 
 \newQuantity{\qDepth}{d}
 
@@ -1031,15 +1004,25 @@
 \newIndexNotationQuantity{\iAlternatingSymbol}{\iPermutationSymbol{}}
 \newIndexNotationQuantity{\iLeviCivitaSymbol}{\iPermutationSymbol{}}
 
-\newUUIndexNotationPair{\iuuKroneckerDelta}{\tuuKroneckerDelta}{\delta}
-\newLLIndexNotationPair{\illKroneckerDelta}{\tllKroneckerDelta}{\delta}
-\newULIndexNotationPair{\iulKroneckerDelta}{\tulKroneckerDelta}{\delta}
-\newLUIndexNotationPair{\iluKroneckerDelta}{\tluKroneckerDelta}{\delta}
+\newUUIndexNotationQuantity{\iuuKroneckerDelta}{\delta}
+\newULIndexNotationQuantity{\iulKroneckerDelta}{\delta}
+\newLUIndexNotationQuantity{\iluKroneckerDelta}{\delta}
+\newLLIndexNotationQuantity{\illKroneckerDelta}{\delta}
 
-\newUUIndexNotationPair{\iuuMetricTensor}{\tuuMetricTensor}{g}
-\newLLIndexNotationPair{\illMetricTensor}{\tllMetricTensor}{g}
-\newULIndexNotationPair{\iulMetricTensor}{\tulMetricTensor}{g}
-\newLUIndexNotationPair{\iluMetricTensor}{\tluMetricTensor}{g}
+\newUUIndexNotationQuantity{\tuuKroneckerDelta}{\oTransformedQuantity{\delta}}
+\newULIndexNotationQuantity{\tulKroneckerDelta}{\oTransformedQuantity{\delta}}
+\newLUIndexNotationQuantity{\tluKroneckerDelta}{\oTransformedQuantity{\delta}}
+\newLLIndexNotationQuantity{\tllKroneckerDelta}{\oTransformedQuantity{\delta}}
+
+\newUUIndexNotationQuantity{\iuuMetricTensor}{g}
+\newULIndexNotationQuantity{\iulMetricTensor}{g}
+\newLUIndexNotationQuantity{\iluMetricTensor}{g}
+\newLLIndexNotationQuantity{\illMetricTensor}{g}
+
+\newUUIndexNotationQuantity{\tuuMetricTensor}{\oTransformedQuantity{g}}
+\newULIndexNotationQuantity{\tulMetricTensor}{\oTransformedQuantity{g}}
+\newLUIndexNotationQuantity{\tluMetricTensor}{\oTransformedQuantity{g}}
+\newLLIndexNotationQuantity{\tllMetricTensor}{\oTransformedQuantity{g}}
 
 \newUUUIndexNotationQuantity{\iuuuChristoffelSymbol}{\Gamma}
 \newUULIndexNotationQuantity{\iuulChristoffelSymbol}{\Gamma}
@@ -1049,6 +1032,15 @@
 \newLUUIndexNotationQuantity{\iluuChristoffelSymbol}{\Gamma}
 \newLLUIndexNotationQuantity{\illuChristoffelSymbol}{\Gamma}
 \newLLLIndexNotationQuantity{\illlChristoffelSymbol}{\Gamma}
+
+\newUUUIndexNotationQuantity{\tuuuChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
+\newUULIndexNotationQuantity{\tuulChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
+\newULLIndexNotationQuantity{\tullChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
+\newULUIndexNotationQuantity{\tuluChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
+\newLULIndexNotationQuantity{\tlulChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
+\newLUUIndexNotationQuantity{\tluuChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
+\newLLUIndexNotationQuantity{\tlluChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
+\newLLLIndexNotationQuantity{\tlllChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
