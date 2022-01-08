@@ -56,7 +56,9 @@ Features (and status)
 
     - Index notation
 
-        - `\newIndexNotationQuantity` (complete)
+        - `\newIndexNotationQuantity` (complete, old convention)
+
+        - `\newUIndexNotationQuantity`, etc. (incomplete, new convention)
 
 - A library of standardized symbols for quantities (incomplete)
 
