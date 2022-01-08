@@ -242,7 +242,32 @@ The speed of sound in an ideal gas is
 ```
 
 
-### Using index notation (summation convention)
+### Using index notation (new convention)
+
+The new convention for index notation (still being implemented) more
+explicitly notes which indices are subscripts (lower indices) and superscripts
+(upper indices).  For example, the statement that the metric tensor and
+conjugate metric tensor are inverses of each other can be expressed as
+
+```latex
+\begin{equation}
+    \iuuMetricTensor{i}{k}
+    \illMetricTensor{k}{j}
+    =
+    \iulKroneckerDelta{i}{j}
+    \,.
+\end{equation}
+```
+
+The prefix `l` specifies a lower index and the prefix `u` specifies an upper
+index.  These commands let you preserve the order of the subscripts and
+superscripts and make the equations more clear in some circumstances.
+
+
+### Using index notation (old convention)
+
+This convention should eventually be deprecated, but I may keep it for
+rectangular index notation due to its ease of use.
 
 Index notation commands operate differently.  Each index notation command
 accepts the lower indices as the required argument and the upper indices as the
@@ -263,14 +288,6 @@ particular case while still allowing for more general usage.
     \,.
 \end{equation}
 ```
-
-TODO: Switch from this interface to something like `\iQuantity{iJ}`, where `i`
-is a lower index and `J` is an upper index.  Using lowercase letters for lower
-indices and uppercase letters for upper indices should simplify the use of
-these commands.  An easier-to-implement alternative is specifying the indices
-with a command like `\udud{i}{j}{k}{l}`, where `u` is for an upper index and
-`d` is for a lower index.  Note also that this notation can be built into the
-index notation command itself, like `\iuuMetricTensor{i}{j}`, for example.
 
 
 -------------------------------------------------------------------------------
