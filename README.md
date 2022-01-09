@@ -268,8 +268,8 @@ superscripts and make the equations more clear in some circumstances.
 
 ### Using index notation (old convention)
 
-This convention should eventually be deprecated, but I may keep it for
-rectangular index notation due to its ease of use.
+This convention should be used for rectangular index notation only due to its
+ease of use.
 
 Index notation commands operate differently.  Each index notation command
 accepts the lower indices as the required argument and the upper indices as the
