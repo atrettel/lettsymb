@@ -201,7 +201,6 @@
 \bar{#1}
 }
 
-% TODO: This command will be deprecated later.
 \newcommand{\newIndexNotationQuantity}[2]{%
 \newcommand{#1}[2][]{%
 \def\temp{##1} \ifx\temp\empty%
@@ -212,7 +211,6 @@
 }
 }
 
-% TODO: This command will be deprecated later.
 \newcommand{\newIndexNotationPair}[3]{%
 \newIndexNotationQuantity{#1}{#3}
 \newIndexNotationQuantity{#2}{\oTransformedQuantity{#3}}
