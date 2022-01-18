@@ -418,6 +418,8 @@
 \newQuantity{\qAcceleration}{a}
 \newVectorQuantity{\vAcceleration}{a}
 \newIndexNotationPair{\iAcceleration}{\tAcceleration}{a}
+\newRankOneTensor{\iuAcceleration}{\ilAcceleration}{a}
+\newRankOneTensor{\tuAcceleration}{\tlAcceleration}{\oTransformedQuantity{a}}
 
 \newQuantity{\qAngularAcceleration}{\alpha}
 
@@ -442,7 +444,6 @@
 \newQuantity{\qCoordinate}{x}
 \newVectorQuantity{\vCoordinate}{x}
 \newIndexNotationPair{\iCoordinate}{\tCoordinate}{x}
-
 \newRankOneTensor{\iuCoordinate}{\ilCoordinate}{x}
 \newRankOneTensor{\tuCoordinate}{\tlCoordinate}{\oTransformedQuantity{x}}
 
@@ -467,6 +468,8 @@
 \newQuantity{\qPosition}{r}
 \newVectorQuantity{\vPosition}{r}
 \newIndexNotationPair{\iPosition}{\tPosition}{r}
+\newRankOneTensor{\iuPosition}{\ilPosition}{r}
+\newRankOneTensor{\tuPosition}{\tlPosition}{\oTransformedQuantity{r}}
 
 \newQuantity{\qRadius}{r}
 \newQuantity{\aRadius}{R}
@@ -488,6 +491,8 @@
 \newQuantity{\qVelocity}{u}
 \newVectorQuantity{\vVelocity}{u}
 \newIndexNotationPair{\iVelocity}{\tVelocity}{u}
+\newRankOneTensor{\iuVelocity}{\ilVelocity}{u}
+\newRankOneTensor{\tuVelocity}{\tlVelocity}{\oTransformedQuantity{u}}
 
 \ifUseStrikethroughVolume
 \newQuantity{\qVolume}{\text{\sout{\ensuremath{V}}}}
@@ -558,6 +563,8 @@
 \newQuantity{\qAngularMomentum}{L}
 \newVectorQuantity{\vAngularMomentum}{L}
 \newIndexNotationPair{\iAngularMomentum}{\tAngularMomentum}{L}
+\newRankOneTensor{\iuAngularMomentum}{\ilAngularMomentum}{L}
+\newRankOneTensor{\tuAngularMomentum}{\tlAngularMomentum}{\oTransformedQuantity{L}}
 
 \newQuantity{\qAreaMomentOfInertia}{I}
 
@@ -569,6 +576,8 @@
 
 \newQuantity{\qDeviatoricStress}{d}
 \newIndexNotationPair{\iDeviatoricStress}{\tDeviatoricStress}{d}
+\newRankTwoTensor{\iuuDeviatoricStress}{\iulDeviatoricStress}{\iluDeviatoricStress}{\illDeviatoricStress}{d}
+\newRankTwoTensor{\tuuDeviatoricStress}{\tulDeviatoricStress}{\tluDeviatoricStress}{\tllDeviatoricStress}{\oTransformedQuantity{d}}
 
 \newQuantity{\qDilatationRate}{\Delta}
 
@@ -581,6 +590,8 @@
 \newQuantity{\qForce}{F}
 \newVectorQuantity{\vForce}{F}
 \newIndexNotationPair{\iForce}{\tForce}{F}
+\newRankOneTensor{\iuForce}{\ilForce}{F}
+\newRankOneTensor{\tuForce}{\tlForce}{\oTransformedQuantity{F}}
 
 \newQuantity{\qGravitationalConstant}{G}
 
@@ -603,13 +614,19 @@
 \newQuantity{\qMoment}{M}
 \newVectorQuantity{\vMoment}{M}
 \newIndexNotationPair{\iMoment}{\tMoment}{M}
+\newRankOneTensor{\iuMoment}{\ilMoment}{M}
+\newRankOneTensor{\tuMoment}{\tlMoment}{\oTransformedQuantity{M}}
 
 \newQuantity{\qMomentum}{p}
 \newVectorQuantity{\vMomentum}{p}
 \newIndexNotationPair{\iMomentum}{\tMomentum}{p}
+\newRankOneTensor{\iuMomentum}{\ilMomentum}{p}
+\newRankOneTensor{\tuMomentum}{\tlMomentum}{\oTransformedQuantity{p}}
 
 \newQuantity{\qNormalStress}{\sigma}
 \newIndexNotationPair{\iNormalStress}{\tNormalStress}{\sigma}
+\newRankTwoTensor{\iuuNormalStress}{\iulNormalStress}{\iluNormalStress}{\illNormalStress}{\sigma}
+\newRankTwoTensor{\tuuNormalStress}{\tulNormalStress}{\tluNormalStress}{\tllNormalStress}{\oTransformedQuantity{\sigma}}
 
 \newQuantity{\qPoissonsRatio}{\nu}
 
@@ -625,18 +642,26 @@
 
 \newQuantity{\qShearStrain}{\gamma}
 \newIndexNotationPair{\iShearStrain}{\tShearStrain}{\gamma}
+\newRankTwoTensor{\iuuShearStrain}{\iulShearStrain}{\iluShearStrain}{\illShearStrain}{\gamma}
+\newRankTwoTensor{\tuuShearStrain}{\tulShearStrain}{\tluShearStrain}{\tllShearStrain}{\oTransformedQuantity{\gamma}}
 
 \newQuantity{\qShearStress}{\tau}
 \newIndexNotationPair{\iShearStress}{\tShearStress}{\tau}
+\newRankTwoTensor{\iuuShearStress}{\iulShearStress}{\iluShearStress}{\illShearStress}{\tau}
+\newRankTwoTensor{\tuuShearStress}{\tulShearStress}{\tluShearStress}{\tllShearStress}{\oTransformedQuantity{\tau}}
 
 \newQuantity{\qSpeedOfSound}{a}
 \newQuantity{\aSpeedOfSound}{c}
 
 \newQuantity{\qStrain}{\varepsilon}
 \newIndexNotationPair{\iStrain}{\tStrain}{\varepsilon}
+\newRankTwoTensor{\iuuStrain}{\iulStrain}{\iluStrain}{\illStrain}{\varepsilon}
+\newRankTwoTensor{\tuuStrain}{\tulStrain}{\tluStrain}{\tllStrain}{\oTransformedQuantity{\varepsilon}}
 
 \newQuantity{\qStress}{\sigma}
 \newIndexNotationPair{\iStress}{\tStress}{\sigma}
+\newRankTwoTensor{\iuuStress}{\iulStress}{\iluStress}{\illStress}{\sigma}
+\newRankTwoTensor{\tuuStress}{\tulStress}{\tluStress}{\tllStress}{\oTransformedQuantity{\sigma}}
 
 \newQuantity{\qSurfaceTension}{\sigma}
 \newQuantity{\aSurfaceTension}{\gamma}
@@ -658,6 +683,8 @@
 
 \newQuantity{\qStrainRate}{\dot{\qStrain}}
 \newIndexNotationPair{\iStrainRate}{\tStrainRate}{\dot{\qStrain}}
+\newRankTwoTensor{\iuuStrainRate}{\iulStrainRate}{\iluStrainRate}{\illStrainRate}{\dot{\qStrain}}
+\newRankTwoTensor{\tuuStrainRate}{\tulStrainRate}{\tluStrainRate}{\tllStrainRate}{\oTransformedQuantity{\dot{\qStrain}}}
 
 \newQuantity{\qYoungsModulus}{\qTensileModulus}
 
