@@ -829,6 +829,8 @@
 \newQuantity{\qElectricFieldStrength}{E}
 \newVectorQuantity{\vElectricFieldStrength}{E}
 \newIndexNotationPair{\iElectricFieldStrength}{\tElectricFieldStength}{E}
+\newRankOneTensor{\iuElectricFieldStrength}{\ilElectricFieldStrength}{E}
+\newRankOneTensor{\tuElectricFieldStrength}{\tlElectricFieldStrength}{\oTransformedQuantity{E}}
 
 \newQuantity{\qElectricCharge}{Q}
 
@@ -841,6 +843,8 @@
 \newQuantity{\qElectricDisplacement}{D}
 \newVectorQuantity{\vElectricDisplacement}{D}
 \newIndexNotationPair{\iElectricDisplacement}{\tElectricDisplacement}{D}
+\newRankOneTensor{\iuElectricDisplacement}{\ilElectricDisplacement}{D}
+\newRankOneTensor{\tuElectricDisplacement}{\tlElectricDisplacement}{\oTransformedQuantity{D}}
 
 \newQuantity{\qElectricPermittivity}{\epsilon}
 
@@ -849,10 +853,14 @@
 \newQuantity{\qMagneticFieldStrength}{H}
 \newVectorQuantity{\vMagneticFieldStrength}{H}
 \newIndexNotationPair{\iMagneticFieldStrength}{\tMagneticFieldStrength}{H}
+\newRankOneTensor{\iuMagneticFieldStrength}{\ilMagneticFieldStrength}{H}
+\newRankOneTensor{\tuMagneticFieldStrength}{\tlMagneticFieldStrength}{\oTransformedQuantity{H}}
 
 \newQuantity{\qMagneticFluxDensity}{B}
 \newVectorQuantity{\vMagneticFluxDensity}{B}
 \newIndexNotationPair{\iMagneticFluxDensity}{\tMagneticFluxDensity}{B}
+\newRankOneTensor{\iuMagneticFluxDensity}{\ilMagneticFluxDensity}{B}
+\newRankOneTensor{\tuMagneticFluxDensity}{\tlMagneticFluxDensity}{\oTransformedQuantity{B}}
 
 \newQuantity{\qMagneticPermeability}{\mu}
 
@@ -1041,22 +1049,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newIndexNotationPair{\iKroneckerDelta}{\tKroneckerDelta}{\delta}
+\newRankTwoTensor{\iuuKroneckerDelta}{\iulKroneckerDelta}{\iluKroneckerDelta}{\illKroneckerDelta}{\delta}
+\newRankTwoTensor{\tuuKroneckerDelta}{\tulKroneckerDelta}{\tluKroneckerDelta}{\tllKroneckerDelta}{\oTransformedQuantity{\delta}}
+
 \newIndexNotationPair{\iMetricTensor}{\tMetricTensor}{g}
+\newRankTwoTensor{\iuuMetricTensor}{\iulMetricTensor}{\iluMetricTensor}{\illMetricTensor}{g}
+\newRankTwoTensor{\tuuMetricTensor}{\tulMetricTensor}{\tluMetricTensor}{\tllMetricTensor}{\oTransformedQuantity{g}}
+
 \newIndexNotationPair{\iChristoffelSymbol}{\tChristoffelSymbol}{\Gamma}
+\newRankThreeTensor{\iuuuChristoffelSymbol}{\iuulChristoffelSymbol}{\iullChristoffelSymbol}{\iuluChristoffelSymbol}{\ilulChristoffelSymbol}{\iluuChristoffelSymbol}{\illuChristoffelSymbol}{\illlChristoffelSymbol}{\Gamma}
+\newRankThreeTensor{\tuuuChristoffelSymbol}{\tuulChristoffelSymbol}{\tullChristoffelSymbol}{\tuluChristoffelSymbol}{\tlulChristoffelSymbol}{\tluuChristoffelSymbol}{\tlluChristoffelSymbol}{\tlllChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
+
 \newIndexNotationPair{\iRiemannTensor}{\tRiemannTensor}{R}
+% TODO: Implement rank four tensors.
 
 \newIndexNotationQuantity{\iPermutationSymbol}{\epsilon}
 \newIndexNotationQuantity{\iAlternatingSymbol}{\iPermutationSymbol{}}
 \newIndexNotationQuantity{\iLeviCivitaSymbol}{\iPermutationSymbol{}}
-
-\newRankTwoTensor{\iuuKroneckerDelta}{\iulKroneckerDelta}{\iluKroneckerDelta}{\illKroneckerDelta}{\delta}
-\newRankTwoTensor{\tuuKroneckerDelta}{\tulKroneckerDelta}{\tluKroneckerDelta}{\tllKroneckerDelta}{\oTransformedQuantity{\delta}}
-
-\newRankTwoTensor{\iuuMetricTensor}{\iulMetricTensor}{\iluMetricTensor}{\illMetricTensor}{g}
-\newRankTwoTensor{\tuuMetricTensor}{\tulMetricTensor}{\tluMetricTensor}{\tllMetricTensor}{\oTransformedQuantity{g}}
-
-\newRankThreeTensor{\iuuuChristoffelSymbol}{\iuulChristoffelSymbol}{\iullChristoffelSymbol}{\iuluChristoffelSymbol}{\ilulChristoffelSymbol}{\iluuChristoffelSymbol}{\illuChristoffelSymbol}{\illlChristoffelSymbol}{\Gamma}
-\newRankThreeTensor{\tuuuChristoffelSymbol}{\tuulChristoffelSymbol}{\tullChristoffelSymbol}{\tuluChristoffelSymbol}{\tlulChristoffelSymbol}{\tluuChristoffelSymbol}{\tlluChristoffelSymbol}{\tlllChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1114,6 +1123,8 @@
 \newQuantity{\qVectorPotential}{B}
 \newVectorQuantity{\vVectorPotential}{B}
 \newIndexNotationPair{\iVectorPotential}{\tVectorPotential}{B}
+\newRankOneTensor{\iuVectorPotential}{\ilVectorPotential}{B}
+\newRankOneTensor{\tuVectorPotential}{\tlVectorPotential}{\oTransformedQuantity{B}}
 
 \newQuantity{\qVelocityPotential}{\phi}
 
@@ -1124,6 +1135,8 @@
 \newQuantity{\qVorticity}{\omega}
 \newVectorQuantity{\vVorticity}{\omega}
 \newIndexNotationPair{\iVorticity}{\tVorticity}{\omega}
+\newRankOneTensor{\iuVorticity}{\ilVorticity}{\omega}
+\newRankOneTensor{\tuVorticity}{\tlVorticity}{\oTransformedQuantity{\omega}}
 
 \newLabeledQuantity{\qWallShearStress}{\qShearStress}{\mathrm{w}}
 
