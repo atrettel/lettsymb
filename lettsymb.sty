@@ -229,6 +229,11 @@
 }
 }
 
+\newcommand{\newRankOneIndexNotationQuantity}[3]{%
+\newUIndexNotationQuantity{#1}{#3}
+\newLIndexNotationQuantity{#2}{#3}
+}
+
 % Rank two tensors
 %
 % I considered using a dot to signify an empty upper or lower index, as some
@@ -420,11 +425,8 @@
 \newVectorQuantity{\vCoordinate}{x}
 \newIndexNotationPair{\iCoordinate}{\tCoordinate}{x}
 
-\newUIndexNotationQuantity{\iuCoordinate}{x}
-\newLIndexNotationQuantity{\ilCoordinate}{x}
-
-\newUIndexNotationQuantity{\tuCoordinate}{\oTransformedQuantity{x}}
-\newLIndexNotationQuantity{\tlCoordinate}{\oTransformedQuantity{x}}
+\newRankOneIndexNotationQuantity{\iuCoordinate}{\ilCoordinate}{x}
+\newRankOneIndexNotationQuantity{\tuCoordinate}{\tlCoordinate}{\oTransformedQuantity{x}}
 
 \newQuantity{\qDepth}{d}
 
