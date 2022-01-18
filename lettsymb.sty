@@ -323,6 +323,17 @@
 }
 }
 
+\newcommand{\newRankThreeIndexNotationQuantity}[9]{%
+\newUUUIndexNotationQuantity{#1}{#9}
+\newUULIndexNotationQuantity{#2}{#9}
+\newULLIndexNotationQuantity{#3}{#9}
+\newULUIndexNotationQuantity{#4}{#9}
+\newLULIndexNotationQuantity{#5}{#9}
+\newLUUIndexNotationQuantity{#6}{#9}
+\newLLUIndexNotationQuantity{#7}{#9}
+\newLLLIndexNotationQuantity{#8}{#9}
+}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1017,23 +1028,8 @@
 \newRankTwoIndexNotationQuantity{\iuuMetricTensor}{\iulMetricTensor}{\iluMetricTensor}{\illMetricTensor}{g}
 \newRankTwoIndexNotationQuantity{\tuuMetricTensor}{\tulMetricTensor}{\tluMetricTensor}{\tllMetricTensor}{\oTransformedQuantity{g}}
 
-\newUUUIndexNotationQuantity{\iuuuChristoffelSymbol}{\Gamma}
-\newUULIndexNotationQuantity{\iuulChristoffelSymbol}{\Gamma}
-\newULLIndexNotationQuantity{\iullChristoffelSymbol}{\Gamma}
-\newULUIndexNotationQuantity{\iuluChristoffelSymbol}{\Gamma}
-\newLULIndexNotationQuantity{\ilulChristoffelSymbol}{\Gamma}
-\newLUUIndexNotationQuantity{\iluuChristoffelSymbol}{\Gamma}
-\newLLUIndexNotationQuantity{\illuChristoffelSymbol}{\Gamma}
-\newLLLIndexNotationQuantity{\illlChristoffelSymbol}{\Gamma}
-
-\newUUUIndexNotationQuantity{\tuuuChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
-\newUULIndexNotationQuantity{\tuulChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
-\newULLIndexNotationQuantity{\tullChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
-\newULUIndexNotationQuantity{\tuluChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
-\newLULIndexNotationQuantity{\tlulChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
-\newLUUIndexNotationQuantity{\tluuChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
-\newLLUIndexNotationQuantity{\tlluChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
-\newLLLIndexNotationQuantity{\tlllChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
+\newRankThreeIndexNotationQuantity{\iuuuChristoffelSymbol}{\iuulChristoffelSymbol}{\iullChristoffelSymbol}{\iuluChristoffelSymbol}{\ilulChristoffelSymbol}{\iluuChristoffelSymbol}{\illuChristoffelSymbol}{\illlChristoffelSymbol}{\Gamma}
+\newRankThreeIndexNotationQuantity{\tuuuChristoffelSymbol}{\tuulChristoffelSymbol}{\tullChristoffelSymbol}{\tuluChristoffelSymbol}{\tlulChristoffelSymbol}{\tluuChristoffelSymbol}{\tlluChristoffelSymbol}{\tlllChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
