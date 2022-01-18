@@ -229,7 +229,7 @@
 }
 }
 
-\newcommand{\newRankOneIndexNotationQuantity}[3]{%
+\newcommand{\newRankOneTensor}[3]{%
 \newUIndexNotationQuantity{#1}{#3}
 \newLIndexNotationQuantity{#2}{#3}
 }
@@ -267,7 +267,7 @@
 }
 }
 
-\newcommand{\newRankTwoIndexNotationQuantity}[5]{%
+\newcommand{\newRankTwoTensor}[5]{%
 \newUUIndexNotationQuantity{#1}{#5}
 \newULIndexNotationQuantity{#2}{#5}
 \newLUIndexNotationQuantity{#3}{#5}
@@ -323,7 +323,7 @@
 }
 }
 
-\newcommand{\newRankThreeIndexNotationQuantity}[9]{%
+\newcommand{\newRankThreeTensor}[9]{%
 \newUUUIndexNotationQuantity{#1}{#9}
 \newUULIndexNotationQuantity{#2}{#9}
 \newULLIndexNotationQuantity{#3}{#9}
@@ -443,8 +443,8 @@
 \newVectorQuantity{\vCoordinate}{x}
 \newIndexNotationPair{\iCoordinate}{\tCoordinate}{x}
 
-\newRankOneIndexNotationQuantity{\iuCoordinate}{\ilCoordinate}{x}
-\newRankOneIndexNotationQuantity{\tuCoordinate}{\tlCoordinate}{\oTransformedQuantity{x}}
+\newRankOneTensor{\iuCoordinate}{\ilCoordinate}{x}
+\newRankOneTensor{\tuCoordinate}{\tlCoordinate}{\oTransformedQuantity{x}}
 
 \newQuantity{\qDepth}{d}
 
@@ -1022,14 +1022,14 @@
 \newIndexNotationQuantity{\iAlternatingSymbol}{\iPermutationSymbol{}}
 \newIndexNotationQuantity{\iLeviCivitaSymbol}{\iPermutationSymbol{}}
 
-\newRankTwoIndexNotationQuantity{\iuuKroneckerDelta}{\iulKroneckerDelta}{\iluKroneckerDelta}{\illKroneckerDelta}{\delta}
-\newRankTwoIndexNotationQuantity{\tuuKroneckerDelta}{\tulKroneckerDelta}{\tluKroneckerDelta}{\tllKroneckerDelta}{\oTransformedQuantity{\delta}}
+\newRankTwoTensor{\iuuKroneckerDelta}{\iulKroneckerDelta}{\iluKroneckerDelta}{\illKroneckerDelta}{\delta}
+\newRankTwoTensor{\tuuKroneckerDelta}{\tulKroneckerDelta}{\tluKroneckerDelta}{\tllKroneckerDelta}{\oTransformedQuantity{\delta}}
 
-\newRankTwoIndexNotationQuantity{\iuuMetricTensor}{\iulMetricTensor}{\iluMetricTensor}{\illMetricTensor}{g}
-\newRankTwoIndexNotationQuantity{\tuuMetricTensor}{\tulMetricTensor}{\tluMetricTensor}{\tllMetricTensor}{\oTransformedQuantity{g}}
+\newRankTwoTensor{\iuuMetricTensor}{\iulMetricTensor}{\iluMetricTensor}{\illMetricTensor}{g}
+\newRankTwoTensor{\tuuMetricTensor}{\tulMetricTensor}{\tluMetricTensor}{\tllMetricTensor}{\oTransformedQuantity{g}}
 
-\newRankThreeIndexNotationQuantity{\iuuuChristoffelSymbol}{\iuulChristoffelSymbol}{\iullChristoffelSymbol}{\iuluChristoffelSymbol}{\ilulChristoffelSymbol}{\iluuChristoffelSymbol}{\illuChristoffelSymbol}{\illlChristoffelSymbol}{\Gamma}
-\newRankThreeIndexNotationQuantity{\tuuuChristoffelSymbol}{\tuulChristoffelSymbol}{\tullChristoffelSymbol}{\tuluChristoffelSymbol}{\tlulChristoffelSymbol}{\tluuChristoffelSymbol}{\tlluChristoffelSymbol}{\tlllChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
+\newRankThreeTensor{\iuuuChristoffelSymbol}{\iuulChristoffelSymbol}{\iullChristoffelSymbol}{\iuluChristoffelSymbol}{\ilulChristoffelSymbol}{\iluuChristoffelSymbol}{\illuChristoffelSymbol}{\illlChristoffelSymbol}{\Gamma}
+\newRankThreeTensor{\tuuuChristoffelSymbol}{\tuulChristoffelSymbol}{\tullChristoffelSymbol}{\tuluChristoffelSymbol}{\tlulChristoffelSymbol}{\tluuChristoffelSymbol}{\tlluChristoffelSymbol}{\tlllChristoffelSymbol}{\oTransformedQuantity{\Gamma}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
